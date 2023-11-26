@@ -2,7 +2,7 @@
 A simple tool for checking sha256 hashes when downloading files off the internet
 
 More and more companies are providing sha256 hashes alongside their download links to give users peace of mind that their files are safe to run. 
-Sites like [this](https://techdocs.akamai.com/download-ctr/docs/verify-checksum) provide directions for hashing files in the command prompt.
+Sites like [this](https://techdocs.akamai.com/download-ctr/docs/verify-checksum) provide directions for hashing files in the command line.
 
 Hash Checker provides a very simple UI for checking sha256 hashes.
 
