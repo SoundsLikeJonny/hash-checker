@@ -30,3 +30,4 @@ ENV = os.getenv('ENV')
 if ENV == 'web':
     ft.app(target=main)
     exit()
+ft.app(target=main)
