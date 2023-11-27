@@ -21,6 +21,6 @@
 #  SOFTWARE.
 
 import flet as ft
-from page_main import main
+from src.ui.page_main import main
 
 ft.app(target=main)
