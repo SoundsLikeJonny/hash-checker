@@ -29,7 +29,7 @@ from flet_core.file_picker import FilePickerFile
 
 def main(page: ft.Page):
     page.theme = ft.Theme(color_scheme_seed=ft.colors.LIGHT_BLUE)
-    page.theme_mode = ft.ThemeMode.DARK
+    page.theme_mode = ft.ThemeMode.LIGHT
     page.fonts = {
         "Kanit": "https://raw.githubusercontent.com/google/fonts/master/ofl/kanit/Kanit-Bold.ttf",
     }
@@ -85,13 +85,13 @@ def main(page: ft.Page):
         page.update()
 
     def check_hash():
-        if hash_text.value == paste_text_field.value and hash_text.value != '':
+        if hash_text.value.casefold() == paste_text_field.value.casefold() and hash_text.value != '':
             result_icon.name = ft.icons.CHECK
             result_icon.color = ft.colors.GREEN
             paste_text_field.error_text = None
             page.update()
             return
-        if hash_text.value != paste_text_field.value:
+        if hash_text.value.casefold() != paste_text_field.value.casefold():
             result_icon.name = ft.icons.ERROR
             result_icon.color = ft.colors.RED
             paste_text_field.error_text = 'Does not match'
