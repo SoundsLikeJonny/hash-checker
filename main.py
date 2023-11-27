@@ -21,6 +21,12 @@
 #  SOFTWARE.
 
 import flet as ft
+import os
+
 from src.ui.page_main import main
 
-ft.app(target=main)
+ENV = os.getenv('ENV')
+
+if ENV == 'web':
+    ft.app(target=main)
+    exit()
